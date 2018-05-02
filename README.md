@@ -89,7 +89,7 @@ Sample crowdai.json:
 ```json
 {
   "challenge_id": "vizdoom2018",
-  "track_ic": "singleplayer",
+  "track_id": "singleplayer",
   "author": "Johnny the Leader",
   "authors": ["Johnny the Leader", "Steve the Devops", "Goeff the AI guy", "Bill the Intern" ],
   "license": "MIT",
