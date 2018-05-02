@@ -27,7 +27,7 @@ repo2docker --no-run \
   --debug .
 ```
 
-### Run Locally
+### Run Agent Locally
 ```
 nvidia-docker run \
   --name my_local_container \
@@ -36,6 +36,31 @@ nvidia-docker run \
   --env="DISPLAY" \
   /home/crowdai/run.sh
 ```
+and you should see something along the lines of :
+```bash
+================================================================================
+Beginning execution of mock.py
+================================================================================
+AL lib: (WW) alc_initconfig: Failed to initialize backend "pulse"
+Press 'Q' to abort network game synchronization.
+Contacting host: |
+```
+Now, in a separate tab you need to run a host for your agent to be able to
+connect to.
+
+### Start Host for a Mock Evaluation
+```bash
+docker pull spMohanty/vizdoom2018-singleplayer
+docker run \
+  --name my_local_container \
+  -it spMohanty/vizdoom2018-singleplayer \
+  --net=host \
+  --env="DISPLAY" \
+  /home/crowdai/run.sh
+```
+
+and now your agent should be able to connect with the local instance of the grader
+and start a mock evaluation.
 
 ### Author(s)
 * Sharada Mohanty <sharada.mohanty@epfl.ch>   
