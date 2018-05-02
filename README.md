@@ -16,19 +16,19 @@ Instructions for building and testing the image locally.
 * **docker** : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/)
 * **nvidia-docker** : By following the instructions [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 * **repo2docker**
-```
+```sh
 pip install jupyter-repo2docker
 ```
 
 #### Cloning repository
-```
+```sh
 git clone git@github.com:crowdAI/vizdoom2018-singleplayer-starter-kit.git
 cd vizdoom2018-singleplayer-starter-kit
 ```
 
 #### <a name="build"></a> Build Image
 Assuming you have docker setup on your machine. You can now build the image by :
-```
+```sh
 export image_tag="my_submission_image"
 repo2docker --no-run \
   --user-id 1001 \
@@ -41,7 +41,7 @@ repo2docker --no-run \
 In a dedicated tab (terminal) you need to run a host for your agent to be able to
 connect to the game (also in single player!).
 
-```bash
+```sh
 docker pull spmohanty/vizdoom2018-singleplayer-host #Or buuld your you
 docker run \
   --name my_local_container \
@@ -52,7 +52,7 @@ docker run \
 ```
 
 #### <a name="run_agent"></a>  Run Agent Locally
-```
+```sh
 export container_name="my_local_container"
 export image_tag="my_submission_image"
 docker run \
@@ -64,7 +64,7 @@ docker run \
   /home/crowdai/run.sh
 ```
 and you should see something along the lines of :
-```bash
+```sh
 ================================================================================
 Beginning execution of mock.py
 ================================================================================
@@ -86,7 +86,7 @@ The repository should contain:
     * track_id - "singleplayer" or "multiplayer" 
     * author - name of the author (string), for teams, pleas **also** create a field 'authors' containing a list with all authors
 Sample crowdai.json:
-```json
+```javascript
 {
   "challenge_id": "vizdoom2018",
   "track_id": "singleplayer",
@@ -105,13 +105,13 @@ Lets say you created a repository at:
 https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
 ```
 * push the contents of this repository into this **new private repository**
-```
+```sh
 git remote add crowdAI https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
 git push origin master
 ```
 * remember to modify [crowdai.json](crowdai.json) to use your author information.
 * create and push a new tag :
-```
+```sh
 git tag -a v1.4 -m "my version 1.4"
 git push crowdAI master
 git push v1.4
