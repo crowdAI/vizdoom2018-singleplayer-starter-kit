@@ -54,10 +54,10 @@ connect to a game.
 
 #### Start Server for a Mock Evaluation
 ```bash
-docker pull spMohanty/vizdoom2018-singleplayer-host
+docker pull spmohanty/vizdoom2018-singleplayer-host #Or buuld your you
 docker run \
   --name my_local_container \
-  -it spMohanty/vizdoom2018-singleplayer-host \
+  -it spmohanty/vizdoom2018-singleplayer-host \
   --net=host \
   --env="DISPLAY" \
   /home/crowdai/run.sh
