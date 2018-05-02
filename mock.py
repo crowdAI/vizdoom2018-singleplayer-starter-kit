@@ -2,13 +2,24 @@
 
 import vizdoom as vzd
 from random import choice
+import os
 
 game = vzd.DoomGame()
 game.load_config("config/custom_config.cfg")
 
-# Name your agent and select color
+# Name your agent
+#
+# Note: The grading infrastructure will provide the expected agent name
+# in the environment variable `CROWDAI_AGENT_NAME`
+# If your agent does not use this environment variable then the score
+# will not be counted against your username.
+if "CROWDAI_AGENT_NAME" in os.environ.keys():
+    name = os.environ["CROWDAI_AGENT_NAME"]
+else:
+    name = "SampleRandomAgent"
+
+# and select color
 # colors: 0 - green, 1 - gray, 2 - brown, 3 - red, 4 - light gray, 5 - light brown, 6 - light red, 7 - light blue
-name = "SampleRandomAgent"
 color = 0
 game.set_doom_scenario_path("mock.wad")
 game.add_game_args("-join localhost +name {} +colorset {}".format(name, color))
