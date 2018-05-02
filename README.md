@@ -22,22 +22,24 @@ cd vizdoom2018-singleplayer-starter-kit
 #### Build Image
 Assuming you have docker setup on your machine. You can now build the image by :
 ```
+export image_tag="my_submission_image"
 repo2docker --no-run \
   --user-id 1001 \
   --user-name crowdai \
-  --image-name my_submission_image \
+  --image-name ${image_tag} \
   --debug .
 ```
 
 #### Run Agent Locally
 ```
+export container_name="my_local_container"
+export image_tag="my_submission_image"
 docker run \
-  --user root \
-  --name my_local_container \
-  -it my_submission_image \
   --net=host \
-  --env="DISPLAY" \
-  --privileged \  
+  -ti --rm \
+  --name ${container_name} \
+  --env="DISPLAY" --privileged \
+  ${image_tag} \
   /home/crowdai/run.sh
 ```
 and you should see something along the lines of :
