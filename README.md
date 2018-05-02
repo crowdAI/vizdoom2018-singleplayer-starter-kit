@@ -114,6 +114,7 @@ git push origin master
 ```
 git tag -a v1.4 -m "my version 1.4"
 git push crowdAI master
+git push v1.4
 ```
 
 **Every tag you push is counted as a submission**. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions)
