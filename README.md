@@ -48,14 +48,14 @@ Press 'Q' to abort network game synchronization.
 Contacting host: |
 ```
 Now, in a separate tab you need to run a host for your agent to be able to
-connect to.
+connect to a game.
 
-#### Start Host for a Mock Evaluation
+#### Start Server for a Mock Evaluation
 ```bash
-docker pull spMohanty/vizdoom2018-singleplayer
+docker pull spMohanty/vizdoom2018-singleplayer-host
 docker run \
   --name my_local_container \
-  -it spMohanty/vizdoom2018-singleplayer \
+  -it spMohanty/vizdoom2018-singleplayer-host \
   --net=host \
   --env="DISPLAY" \
   /home/crowdai/run.sh
@@ -71,7 +71,7 @@ Lets say you created a repository at :
 ```
 https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
 ```
-* push the contents of this repository into this new private repository
+* push the contents of this repository into this **new private repository**
 ```
 git remote add crowdAI https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
 git push origin master
@@ -83,7 +83,7 @@ git tag -a v1.4 -m "my version 1.4"
 git push crowdAI master
 ```
 
-Every tag you push is counted as a submission. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions)
+**Every tag you push is counted as a submission**. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions)
 and more details about the evaluation of your submission will be available at :
 ```
 https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer/issues
