@@ -1,11 +1,11 @@
 # vizdoom2018-starter-kit
 
 
-## Local build
+### Local build
 
 Instructions for building and testing the image locally.   
 
-### Install Dependencies
+#### Install Dependencies
 * **docker** : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/)
 * **nvidia-docker** : By following the instructions [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 * **repo2docker**
@@ -13,13 +13,13 @@ Instructions for building and testing the image locally.
 pip install jupyter-repo2docker
 ```
 
-### Cloning repository
+#### Cloning repository
 ```
 git clone git@github.com:crowdAI/vizdoom2018-singleplayer-starter-kit.git
 cd vizdoom2018-singleplayer-starter-kit
 ```
 
-### Build Image
+#### Build Image
 Assuming you have docker setup on your machine. You can now build the image by :
 ```
 repo2docker --no-run \
@@ -29,7 +29,7 @@ repo2docker --no-run \
   --debug .
 ```
 
-### Run Agent Locally
+#### Run Agent Locally
 ```
 nvidia-docker run \
   --name my_local_container \
@@ -50,7 +50,7 @@ Contacting host: |
 Now, in a separate tab you need to run a host for your agent to be able to
 connect to.
 
-### Start Host for a Mock Evaluation
+#### Start Host for a Mock Evaluation
 ```bash
 docker pull spMohanty/vizdoom2018-singleplayer
 docker run \
@@ -64,7 +64,7 @@ docker run \
 and now your agent should be able to connect with the local instance of the grader
 and start a mock evaluation.
 
-## Making a Submission
+### Making a Submission
 Making your first submission is actually much easier.
 * Create a **private** repository on [gitlab.crowdai.org](http://gitlab.crowdai.org/)   
 Lets say you created a repository at :
@@ -84,7 +84,7 @@ git push crowdAI master
 ```
 
 Every tag you push is counted as a submission. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions)
-and morer details about the evaluation of your submission will be available at :
+and more details about the evaluation of your submission will be available at :
 ```
 https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer/issues
 ```
