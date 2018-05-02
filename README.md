@@ -92,5 +92,5 @@ as a new issue.
 
 ### Author(s)
 * Sharada Mohanty <sharada.mohanty@epfl.ch>   
-* Marek@wydmuch.poznan.pl <Marek@wydmuch.poznan.pl>   
-* kempka.michal@gmail.com <Marek@wydmuch.poznan.pl>   
+* Marek@wydmuch.poznan.pl   
+* kempka.michal@gmail.com   
