@@ -1,8 +1,10 @@
 # vizdoom2018-starter-kit
 
 
-# Local build
-Instructions for building and testing the image locally
+## Local build
+
+Instructions for building and testing the image locally.   
+
 ### Install Dependencies
 * **docker** : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/)
 * **nvidia-docker** : By following the instructions [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
@@ -61,6 +63,32 @@ docker run \
 
 and now your agent should be able to connect with the local instance of the grader
 and start a mock evaluation.
+
+## Making a Submission
+Making your first submission is actually much easier.
+* Create a **private** repository on [gitlab.crowdai.org](http://gitlab.crowdai.org/)   
+Lets say you created a repository at :
+```
+https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
+```
+* push the contents of this repository into this new private repository
+```
+git remote add crowdAI https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
+git push origin master
+```
+* remember to modify [crowdai.json](crowdai.json) to use your author information.
+* create and push a new tag :
+```
+git tag -a v1.4 -m "my version 1.4"
+git push crowdAI master
+```
+
+Every tag you push is counted as a submission. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018/submissions)
+and morer details about the evaluation of your submission will be available at :
+```
+https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer/issues
+```
+as a new issue.
 
 ### Author(s)
 * Sharada Mohanty <sharada.mohanty@epfl.ch>   
