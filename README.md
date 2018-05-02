@@ -4,8 +4,9 @@
 # Local build
 Instructions for building and testing the image locally
 ### Install Dependencies
-* docker : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-* repo2docker
+* **docker** : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/)
+* **nvidia-docker** : By following the instructions [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
+* **repo2docker**
 ```
 pip install jupyter-repo2docker
 ```
@@ -24,6 +25,16 @@ repo2docker --no-run \
   --user-name crowdai \
   --image-name my_submission_image \
   --debug .
+```
+
+### Run Locally
+```
+nvidia-docker run \
+  --name my_local_container \
+  -it my_submission_image \
+  --net=host \
+  --env="DISPLAY" \
+  /home/crowdai/run.sh
 ```
 
 ### Author(s)
