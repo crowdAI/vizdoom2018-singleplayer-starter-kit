@@ -31,11 +31,13 @@ repo2docker --no-run \
 
 #### Run Agent Locally
 ```
-nvidia-docker run \
+docker run \
+  --user root \
   --name my_local_container \
   -it my_submission_image \
   --net=host \
   --env="DISPLAY" \
+  --privileged \  
   /home/crowdai/run.sh
 ```
 and you should see something along the lines of :
