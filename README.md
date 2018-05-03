@@ -42,9 +42,12 @@ In a dedicated tab (terminal) you need to run a host for your agent to be able t
 connect to the game (also in single player!).
 
 ```sh
-docker pull spmohanty/vizdoom2018-singleplayer-host #Or buuld your you
+export host_container_name="vizdoom_host_container"
+docker rm -f $host_container_name #Ensure an old instance of the container is not present
+
+docker pull spmohanty/vizdoom2018-singleplayer-host #Or build your own
 docker run \
-  --name my_local_container \
+  --name $host_container_name \
   -it spmohanty/vizdoom2018-singleplayer-host \
   --net=host \
   --env="DISPLAY" \
@@ -53,7 +56,9 @@ docker run \
 
 #### <a name="run_agent"></a>  Run Agent Locally
 ```sh
-export container_name="my_local_container"
+export container_name="my_submission_container"
+docker rm -f $container_name #Ensure an old instance of the container is not present
+
 export image_tag="my_submission_image"
 docker run \
   --net=host \
