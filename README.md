@@ -1,4 +1,10 @@
 # vizdoom2018-starter-kit
+![CrowdAI-Logo](https://github.com/crowdAI/crowdai/raw/master/app/assets/images/misc/crowdai-logo-smile.svg?sanitize=true)
+
+[![gitter-badge](https://badges.gitter.im/crowdAI/vizdoom2018.png)](https://gitter.im/crowdAI/vizdoom2018)
+
+
+
 How to start your participation in [Visual Doom AI Competition 2018](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-track-1)!
 
 * [Local build](#local_build)
