@@ -54,9 +54,9 @@ docker rm -f $host_container_name #Ensure an old instance of the container is no
 docker pull spmohanty/vizdoom2018-singleplayer-host #Or build your own
 docker run \
   --name $host_container_name \
-  -it spmohanty/vizdoom2018-singleplayer-host \
   --net=host \
   --env="DISPLAY" \
+  -it spmohanty/vizdoom2018-singleplayer-host \
   /home/crowdai/run.sh
 ```
 
@@ -68,9 +68,9 @@ docker rm -f $container_name #Ensure an old instance of the container is not pre
 export image_tag="my_submission_image"
 docker run \
   --net=host \
-  -ti --rm \
   --name ${container_name} \
   --env="DISPLAY" --privileged \
+  -ti --rm \
   ${image_tag} \
   /home/crowdai/run.sh
 ```
