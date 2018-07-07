@@ -23,7 +23,7 @@ Instructions for building and testing the image locally.
 * **nvidia-docker** : By following the instructions [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 * **repo2docker**
 ```sh
-pip install jupyter-repo2docker
+pip install crowdai-repo2docker
 ```
 
 #### Cloning repository
@@ -36,7 +36,7 @@ cd vizdoom2018-singleplayer-starter-kit
 Assuming you have docker setup on your machine. You can now build the image by :
 ```sh
 export image_tag="my_submission_image"
-repo2docker --no-run \
+crowdai-repo2docker --no-run \
   --user-id 1001 \
   --user-name crowdai \
   --image-name ${image_tag} \
