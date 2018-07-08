@@ -14,26 +14,22 @@ import os
 agent_name = "SampleRandomAgent"
 server_agent_name = os.getenv("CROWDAI_AGENT_NAME", agent_name)
 
-game_server = os.getenv("CROWDAI_GAME_SERVER", "localhost")
+DEFAULT_WAD_FILE = "mock.wad"
 
 def run_game():
     game = vzd.DoomGame()
     game.load_config("config/custom_config.cfg")
-
     # and select color
     # colors: 0 - green, 1 - gray, 2 - brown, 3 - red, 4 - light gray, 5 - light brown, 6 - light red, 7 - light blue
     color = 0
-    game.set_doom_scenario_path("mock.wad")
-    game.add_game_args("-join {game_server} +name {agent_name} +colorset {colorset}".format(
-        game_server = game_server,
+    game.set_doom_scenario_path(DEFAULT_WAD_FILE)
+    # This will be internally overriden in the grading environment with the relevant WAD file
+
+    game.add_game_args("-join localhost +name {agent_name} +colorset {colorset}".format(
         agent_name = server_agent_name,
         colorset=color
         ))
-    print("-join {game_server} +name {agent_name} +colorset {colorset}".format(
-        game_server = game_server,
-        agent_name = server_agent_name,
-        colorset=color
-        ))
+
     game.set_console_enabled(True)
     game.set_window_visible(False)
 

@@ -7,6 +7,6 @@ ls -lha
 echo "================================================================================"
 echo "Beginning execution of mock.py"
 echo "================================================================================"
+ls .
 CROWDAI_AGENT_NAME=$CROWDAI_AGENT_NAME \
-CROWDAI_GAME_SERVER=$CROWDAI_GAME_SERVER \
-/home/crowdai/mock.py > output/mock_output.txt
+/home/crowdai/mock.py
