@@ -10,7 +10,7 @@ import os
 # Note: The grading infrastructure will provide the expected agent name
 # in the environment variable `CROWDAI_AGENT_NAME`
 # If your agent does not use this environment variable then the score
-# will not be counted against your username.
+# will not be counted against your crowdai user.
 agent_name = "SampleRandomAgent"
 server_agent_name = os.getenv("CROWDAI_AGENT_NAME", _agent_name)
 
