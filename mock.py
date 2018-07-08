@@ -12,7 +12,7 @@ import os
 # If your agent does not use this environment variable then the score
 # will not be counted against your crowdai user.
 agent_name = "SampleRandomAgent"
-server_agent_name = os.getenv("CROWDAI_AGENT_NAME", _agent_name)
+server_agent_name = os.getenv("CROWDAI_AGENT_NAME", agent_name)
 
 game_server = os.getenv("CROWDAI_GAME_SERVER", "localhost")
 
@@ -25,6 +25,11 @@ def run_game():
     color = 0
     game.set_doom_scenario_path("mock.wad")
     game.add_game_args("-join {game_server} +name {agent_name} +colorset {colorset}".format(
+        game_server = game_server,
+        agent_name = server_agent_name,
+        colorset=color
+        ))
+    print("-join {game_server} +name {agent_name} +colorset {colorset}".format(
         game_server = game_server,
         agent_name = server_agent_name,
         colorset=color
