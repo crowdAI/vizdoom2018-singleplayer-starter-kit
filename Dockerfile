@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
 
 # ViZdoom dependencies
 RUN apt-get update && apt-get install -y \
@@ -82,4 +82,4 @@ RUN sudo chmod 775 -R *
 # Uncomment to use doom2.wad:
 #COPY doom2.wad /usr/local/lib/python3.5/dist-packages/vizdoom
 
-ENTRYPOINT ["./run.sh"]
+  ENTRYPOINT ["./run.sh"]
