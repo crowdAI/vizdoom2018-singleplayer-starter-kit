@@ -1,6 +1,7 @@
 {
-  "challenge_id": "vizdoom2018",
-  "track_id" : "singleplayer",
+  "challenge_id": "vizdoom2018_single_player",
+  "grader_id" : "vizdoom2018_single_player",
   "author": "spMohanty",
-  "license": "MIT"
+  "license": "MIT",
+  "gpu" : false
 }
