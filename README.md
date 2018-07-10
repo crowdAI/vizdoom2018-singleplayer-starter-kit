@@ -99,8 +99,8 @@ The repository should contain:
 Sample crowdai.json:
 ```javascript
 {
-  "challenge_id": "vizdoom2018",
-  "track_id": "singleplayer",
+  "challenge_id": "vizdoom2018_single_player",
+  "track_id": "vizdoom2018_single_player",
   "author": "Johnny the Leader",
   "authors": ["Johnny the Leader", "Steve the Devops", "Goeff the AI guy", "Bill the Intern" ],
   "license": "MIT",
