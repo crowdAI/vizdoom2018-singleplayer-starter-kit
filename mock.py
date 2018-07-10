@@ -57,7 +57,7 @@ def run_game():
         game.make_action(choice(actions))
 
         # Log time and frags/kills every ~10 seconds
-        if s.number % 350 == 0:
+        if s and s.number % 350 == 0:
             print("Time: {}, Kills: {}, Frags: {}",
                   game.get_episode_time(),
                   game.get_game_variable(vzd.GameVariable.KILLCOUNT),
