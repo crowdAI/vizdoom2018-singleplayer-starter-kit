@@ -5,8 +5,8 @@ mkdir -p output
 ls -lha
 
 echo "================================================================================"
-echo "Beginning execution of mock.py"
+echo "Beginning execution of random_agent.py"
 echo "================================================================================"
 ls .
 CROWDAI_AGENT_NAME=$CROWDAI_AGENT_NAME \
-/home/crowdai/mock.py
+/home/crowdai/random_agent.py

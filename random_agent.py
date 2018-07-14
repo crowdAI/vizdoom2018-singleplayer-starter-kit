@@ -3,7 +3,7 @@
 import vizdoom as vzd
 from random import choice
 import os
-
+import itertools
 
 # Name your agent
 #
@@ -11,10 +11,11 @@ import os
 # in the environment variable `CROWDAI_AGENT_NAME`
 # If your agent does not use this environment variable then the score
 # will not be counted against your crowdai user.
-agent_name = "SampleRandomAgent"
+agent_name = "RandomDude"
 server_agent_name = os.getenv("CROWDAI_AGENT_NAME", agent_name)
 
 DEFAULT_WAD_FILE = "mock.wad"
+
 
 def run_game():
     game = vzd.DoomGame()
@@ -26,17 +27,25 @@ def run_game():
     # This will be internally overriden in the grading environment with the relevant WAD file
 
     game.add_game_args("-join localhost +name {agent_name} +colorset {colorset}".format(
-        agent_name = server_agent_name,
+        agent_name=server_agent_name,
         colorset=color
-        ))
+    ))
 
     game.set_console_enabled(True)
     game.set_window_visible(False)
 
     game.init()
 
-    # Three sample actions: turn left/right and shoot
-    actions = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+    # 5 buttons:
+    # MOVE_FORWARD
+    # MOVE_RIGHT
+    # MOVE_LEFT
+    # TURN_LEFT
+    # TURN_RIGHT
+    # ATTACK
+
+    buttons_num = game.get_available_buttons_size()
+    actions = [list(action) for action in itertools.product([1, 0], repeat=buttons_num)]
 
     # Play until the game (episode) is over.
     while not game.is_episode_finished():
@@ -65,6 +74,7 @@ def run_game():
 
     print("Episode FINISHED !")
     game.close()
+
 
 if __name__ == "__main__":
     """
