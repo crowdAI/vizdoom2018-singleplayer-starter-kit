@@ -1,49 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
-
-# ViZdoom dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    bzip2 \
-    cmake \
-    curl \
-    git \
-    g++ \
-    libboost-all-dev \
-    libbz2-dev \
-    libfluidsynth-dev \
-    libfreetype6-dev \
-    libgme-dev \
-    libgtk2.0-dev \
-    libjpeg-dev \
-    libopenal-dev \
-    libpng12-dev \
-    libsdl2-dev \
-    libwildmidi-dev \
-    libzmq3-dev \
-    nano \
-    nasm \
-    pkg-config \
-    rsync \
-    software-properties-common \
-    sudo \
-    tar \
-    timidity \
-    unzip \
-    wget \
-    locales \
-    zlib1g-dev \
-    python3-dev \
-    python3 \
-    python3-pip
-
-# Python3
-RUN pip3 install pip --upgrade
-
-RUN pip3 --no-cache-dir install \
-         git+https://github.com/mwydmuch/ViZDoom \
-         tabulate
-
-RUN  apt-get install -y net-tools
+FROM vizdoom/vizdoom:latest
 
 # Unicode support:
 RUN locale-gen en_US.UTF-8
@@ -71,8 +26,6 @@ USER ${USER_NAME}
 WORKDIR ${HOME_DIR}
 
 COPY config config
-COPY _vizdoom.cfg .
-COPY _vizdoom.ini .
 COPY random_agent.py .
 COPY mock.wad .
 COPY run.sh .
@@ -82,4 +35,4 @@ RUN sudo chmod 775 -R *
 # Uncomment to use doom2.wad:
 #COPY doom2.wad /usr/local/lib/python3.5/dist-packages/vizdoom
 
-  ENTRYPOINT ["./run.sh"]
+ENTRYPOINT ["./run.sh"]
