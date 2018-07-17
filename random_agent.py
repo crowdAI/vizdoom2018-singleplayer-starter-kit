@@ -80,7 +80,7 @@ if __name__ == "__main__":
     """
     The `run_game` function plays a single DoomGame, and the submitted agent
     should continue to try to join and play a new game as long as the server
-    doesnot active kill it.
+    doesnot actively kill it.
     """
     while True:
         print("Connecting to Game Episode....")
