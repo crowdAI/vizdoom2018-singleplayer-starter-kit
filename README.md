@@ -19,7 +19,7 @@ How to start your participation in [Visual Doom AI Competition 2018](https://www
 Instructions for building and testing the image locally.   
 
 #### <a name="deps"></a> Install Dependencies
-* **docker** : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/)
+* **docker** : By following the instructions [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 * **nvidia-docker** : By following the instructions [here](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
 * **repo2docker**
 ```sh
