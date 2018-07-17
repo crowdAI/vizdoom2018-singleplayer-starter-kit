@@ -135,6 +135,9 @@ https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer/iss
 ```
 as a new issue (though it's not necessarily an issue).
 
+### <a name="faq"></a> FAQ
+Check out our <a href="FAQ.md">FAQ section</a> for common questions 
+
 ### <a name="create_sub"></a> Author(s)
 * Sharada Mohanty <sharada.mohanty@epfl.ch>   
 * Marek Wydmuch Marek@wydmuch.poznan.pl   
