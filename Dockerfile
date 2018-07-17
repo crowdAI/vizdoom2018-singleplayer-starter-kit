@@ -1,4 +1,5 @@
-FROM vizdoom/vizdoom:latest
+FROM vizdoom/vizdoom:1.1.6-ubuntu16.04-cuda9.0
+
 
 # Unicode support:
 RUN locale-gen en_US.UTF-8
