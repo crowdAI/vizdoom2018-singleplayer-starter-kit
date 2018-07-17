@@ -37,3 +37,6 @@ This seems to be a required workaround due to the MIT-SHM extension: https://git
 
 Try disabling "SHM" support in /etc/pulse/client.conf if pulseaudio on the host crashes when using this workaround.
 You can also use "pulseaudio -k" on the host to kill the service instead to get host audio back. 
+
+- **Your Question ?**   
+Have a question which is not answered here ? Hit us on the [issue tracker](https://github.com/crowdAI/vizdoom2018-singleplayer-starter-kit/issues), and when you have your answer, we welcome you to send a pull request with your question and its answer. 
