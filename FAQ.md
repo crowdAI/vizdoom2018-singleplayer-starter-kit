@@ -2,7 +2,7 @@
 
 This file contains a list of questions that users might ask at some point.
 
-### How do you enable screen forwarding to see the visual output of the game?
+- **How do you enable screen forwarding to see the visual output of the game?**
 
 Add the following commands to random_agent.py and be sure that they are not get overwritten by corresponding entries in  _vizdoom.cfg 
 ```
@@ -12,7 +12,7 @@ Add the following commands to random_agent.py and be sure that they are not get 
     game.add_game_args("+vid_forcesurface 1")
 
 ```
-### How do i enable OpenCV support to display the screen buffer on the host?
+- **How do i enable OpenCV support to display the screen buffer on the host?**
 
 If you want imshow from OpenCV to work start the docker container with "--ipc host"
 ```
