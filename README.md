@@ -1,4 +1,4 @@
-# vizdoom2018-starter-kit
+# VDAIC2018 Singleplayer starter kit
 ![CrowdAI-Logo](https://github.com/crowdAI/crowdai/raw/master/app/assets/images/misc/crowdai-logo-smile.svg?sanitize=true)
 
 [![gitter-badge](https://badges.gitter.im/crowdAI/vizdoom2018.png)](https://gitter.im/crowdAI/vizdoom2018)
