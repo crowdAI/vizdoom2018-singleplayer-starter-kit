@@ -89,7 +89,7 @@ Now your agent should be able to connect with the local instance of the grader
 and start a mock evaluation.
 
 ### <a name="create_sub_tldr"></a> TL;DR : Creating a Submission 
-**Note**: This section assumes, that you have setup your SSH keys on [https://gitlab.crowdai.org](gitlab.crowdai.org) by following the instructions [here](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html).
+**Note**: This section assumes, that you have setup your SSH keys on [https://gitlab.crowdai.org](https://gitlab.crowdai.org) by following the instructions [here](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html).
 
 ```bash
 # Clone Repository 
