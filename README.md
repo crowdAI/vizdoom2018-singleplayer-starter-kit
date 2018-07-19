@@ -12,7 +12,7 @@ How to start your participation in [Visual Doom AI Competition 2018](https://www
   * [Building](#build)
   * [Running the host](#run_host)
   * [Running the agent](#run_agent)
-* [TL;DR Creating a submission)(#create_sub_tldr)
+* [TL;DR Creating a submission](#create_sub_tldr)
 * [Creating a submission](#create_sub)
 
 ### <a name="local_build"></a> Local build
