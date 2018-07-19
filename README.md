@@ -103,6 +103,7 @@ git commit -am "Update crowdai.json"
 # Submit to CrowdAI
 git tag -am "version 0.1" v0.1
 git push origin v0.1
+echo "Check the status of your submission at : 'https://gitlab.crowdai.org/<YOUR_CROWDAI_USER_NAME>/vizdoom2018-singleplayer-starter-kit/issues'
 ```
 
 ### <a name="create_sub"></a>  Creating a Submission
