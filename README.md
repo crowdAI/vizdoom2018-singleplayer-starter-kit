@@ -164,6 +164,8 @@ as a new issue (though it's not necessarily an issue) 😉.
 
 A video of the game will also be generated and available from the [leaderboard](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/leaderboards). How cool is that? ![DOOMGuy](https://static-cdn.jtvnw.net/emoticons/v1/54089/1.0)
 
+![VideoGif](https://user-images.githubusercontent.com/15749650/42955843-b3071226-8b7e-11e8-9049-ecbb87e4cf9a.gif)
+
 ### <a name="faq"></a> FAQ
 Check out our <a href="FAQ.md">FAQ section</a> for common questions 
 
