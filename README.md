@@ -117,7 +117,7 @@ https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
 ```
 * push the contents of this repository into this **new private repository**
 ```sh
-git remote add crowdAI git@gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
+git remote add crowdAI git@gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer.git
 git push crowdAI master
 ```
 * remember to modify [crowdai.json](crowdai.json) to use your author information.
