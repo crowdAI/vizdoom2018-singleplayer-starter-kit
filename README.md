@@ -91,6 +91,7 @@ and start a mock evaluation.
 ### <a name="create_sub_tldr"></a> TL;DR : Creating a Submission 
 **Note**: This section assumes, that you have setup your SSH keys on [https://gitlab.crowdai.org](https://gitlab.crowdai.org) by following the instructions [here](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html).
 
+* **Setting things up the first time **
 ```bash
 # Clone Repository 
 git clone git@github.com:crowdAI/vizdoom2018-singleplayer-starter-kit.git
@@ -102,7 +103,9 @@ git push origin master
 # Update Author
 sed -i 's/spMohanty/<YOUR_CROWDAI_USER_NAME>/g' crowdai.json
 git commit -am "Update crowdai.json"
-# Submit to CrowdAI
+```
+* **Submitting to crowdAI**
+```
 git tag -am "version 0.1" v0.1
 git push origin v0.1
 echo "Check the status of your submission at : 'https://gitlab.crowdai.org/<YOUR_CROWDAI_USER_NAME>/vizdoom2018-singleplayer-starter-kit/issues'
