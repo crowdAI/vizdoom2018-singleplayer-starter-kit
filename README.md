@@ -117,15 +117,15 @@ https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
 ```
 * push the contents of this repository into this **new private repository**
 ```sh
-git remote add crowdAI https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
-git push origin master
+git remote add crowdAI git@gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer
+git push crowdAI master
 ```
 * remember to modify [crowdai.json](crowdai.json) to use your author information.
 * create and push a new tag :
 ```sh
 git tag -a v1.4 -m "my version 1.4"
 git push crowdAI master
-git push v1.4
+git push crowdAI v1.4
 ```
 
 **Every tag you push is counted as a submission**. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-track-1/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-track-1/submissions)
