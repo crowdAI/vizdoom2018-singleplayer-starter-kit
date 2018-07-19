@@ -12,6 +12,7 @@ How to start your participation in [Visual Doom AI Competition 2018](https://www
   * [Building](#build)
   * [Running the host](#run_host)
   * [Running the agent](#run_agent)
+* [TL;DR Creating a submission)(#create_sub_tldr)
 * [Creating a submission](#create_sub)
 
 ### <a name="local_build"></a> Local build
@@ -86,6 +87,23 @@ Contacting host: |
 
 Now your agent should be able to connect with the local instance of the grader
 and start a mock evaluation.
+
+### <a name="create_sub_tldr"></a> TL;DR : Creating a Submission 
+```bash
+# Clone Repository 
+git clone git@github.com:crowdAI/vizdoom2018-singleplayer-starter-kit.git
+cd vizdoom2018-singleplayer-starter-kit
+# Point to new Origin 
+git remote rename origin oldorigin
+git remote add origin git@gitlab.crowdai.org:<YOUR_CROWDAI_USER_NAME>/vizdoom2018-singleplayer-starter-kit.git
+git push origin master
+# Update Author
+sed -i 's/spMohanty/<YOUR_CROWDAI_USER_NAME>/g' crowdai.json
+git commit -am "Update crowdai.json"
+# Submit to CrowdAI
+git tag -am "version 0.1" v0.1
+git push origin v0.1
+```
 
 ### <a name="create_sub"></a>  Creating a Submission
 Making your first submission is actually much easier.
