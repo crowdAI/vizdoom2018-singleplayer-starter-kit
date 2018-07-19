@@ -3,7 +3,7 @@
 
 [![gitter-badge](https://badges.gitter.im/crowdAI/vizdoom2018.png)](https://gitter.im/crowdAI/vizdoom2018)
 
-
+![VideoGif](https://user-images.githubusercontent.com/15749650/42955843-b3071226-8b7e-11e8-9049-ecbb87e4cf9a.gif)
 
 How to start your participation in [Visual Doom AI Competition 2018 - Singleplayer Track (1)](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/)!
 
@@ -163,8 +163,6 @@ as a new issue (though it's not necessarily an issue) 😉.
 <img width="400" src="https://user-images.githubusercontent.com/15749650/42951506-9cb025ba-8b76-11e8-9de8-a92e6a4c1120.PNG">
 
 A video of the game will also be generated and available from the [leaderboard](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/leaderboards). How cool is that? ![DOOMGuy](https://static-cdn.jtvnw.net/emoticons/v1/54089/1.0)
-
-![VideoGif](https://user-images.githubusercontent.com/15749650/42955843-b3071226-8b7e-11e8-9049-ecbb87e4cf9a.gif)
 
 ### <a name="faq"></a> FAQ
 Check out our <a href="FAQ.md">FAQ section</a> for common questions 
