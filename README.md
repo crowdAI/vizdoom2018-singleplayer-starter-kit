@@ -5,14 +5,13 @@
 
 
 
-How to start your participation in [Visual Doom AI Competition 2018](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-track-1)!
+How to start your participation in [Visual Doom AI Competition 2018 - Singleplayer Track (1)](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/)!
 
 * [Local build](#local_build)
   * [Dependencies](#deps)
   * [Building](#build)
   * [Running the host](#run_host)
   * [Running the agent](#run_agent)
-* [TL;DR Creating a submission](#create_sub_tldr)
 * [Creating a submission](#create_sub)
 
 ### <a name="local_build"></a> Local build
@@ -88,29 +87,6 @@ Contacting host: |
 Now your agent should be able to connect with the local instance of the grader
 and start a mock evaluation.
 
-### <a name="create_sub_tldr"></a> TL;DR : Creating a Submission 
-**Note**: This section assumes, that you have setup your SSH keys on [https://gitlab.crowdai.org](https://gitlab.crowdai.org) by following the instructions [here](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html).
-
-* **Setting things up the first time**
-```bash
-# Clone Repository 
-git clone git@github.com:crowdAI/vizdoom2018-singleplayer-starter-kit.git
-cd vizdoom2018-singleplayer-starter-kit
-# Point to new Origin 
-git remote rename origin oldorigin
-git remote add origin git@gitlab.crowdai.org:<YOUR_CROWDAI_USER_NAME>/vizdoom2018-singleplayer-starter-kit.git
-git push origin master
-# Update Author
-sed -i 's/spMohanty/<YOUR_CROWDAI_USER_NAME>/g' crowdai.json
-git commit -am "Update crowdai.json"
-```
-* **Submitting to crowdAI**
-```
-git tag -am "version 0.1" v0.1
-git push origin v0.1
-echo "Check the status of your submission at : 'https://gitlab.crowdai.org/<YOUR_CROWDAI_USER_NAME>/vizdoom2018-singleplayer-starter-kit/issues'
-```
-
 ### <a name="create_sub"></a>  Creating a Submission
 Making your first submission is actually much easier.
 * Create a **private** repository on [gitlab.crowdai.org](http://gitlab.crowdai.org/)  (name is arbitrary)
@@ -152,17 +128,21 @@ git push crowdAI master
 git push crowdAI v1.4
 ```
 
-**Every tag you push is counted as a submission**. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-track-1/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-track-1/submissions)
-and more details about the evaluation of your submission will be available at :
+**Every tag you push is counted as a submission**. And a new submission should reflect on the challenge page at : [https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/submissions](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/submissions)
+You will be able to see your AI agent actually play the game and see more details about your submission evaluation of your submission on :
 ```
 https://gitlab.crowdai.org/<your-crowdAI-user-name>/vizdoom2018-singleplayer/issues
 ```
-as a new issue (though it's not necessarily an issue).
+as a new issue (though it's not necessarily an issue) 😉.
+
+<img width="400" src="https://user-images.githubusercontent.com/15749650/42951506-9cb025ba-8b76-11e8-9de8-a92e6a4c1120.PNG">
+
+A video of the game will also be generated and available from the [leaderboard](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/leaderboards). How cool is that? ![DOOMGuy](https://static-cdn.jtvnw.net/emoticons/v1/54089/1.0)
 
 ### <a name="faq"></a> FAQ
 Check out our <a href="FAQ.md">FAQ section</a> for common questions 
 
 ### <a name="create_sub"></a> Author(s)
 * Sharada Mohanty <sharada.mohanty@epfl.ch>   
-* Marek Wydmuch Marek@wydmuch.poznan.pl   
+* Marek Wydmuch <marek@wydmuch.poznan.pl>  
 * Michał Kempka <kempka.michal@gmail.com>   
