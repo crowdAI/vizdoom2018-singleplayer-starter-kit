@@ -162,7 +162,7 @@ as a new issue (though it's not necessarily an issue) 😉.
 
 <img width="400" src="https://user-images.githubusercontent.com/15749650/42951506-9cb025ba-8b76-11e8-9de8-a92e6a4c1120.PNG">
 
-A video of the game will also be generated and available from the [leaderboard](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/leaderboards). How cool is that? ![DOOMGuy](https://static-cdn.jtvnw.net/emoticons/v1/54089/1.0)
+A video of the game will also be generated and available from the [leaderboard](https://www.crowdai.org/challenges/visual-doom-ai-competition-2018-singleplayer-track-1/leaderboards). How cool is that? :godmode:
 
 ### <a name="faq"></a> FAQ
 Check out our <a href="FAQ.md">FAQ section</a> for common questions 
