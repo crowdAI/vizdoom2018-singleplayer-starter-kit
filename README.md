@@ -52,13 +52,13 @@ connect to the game (also in single player!).
 export host_container_name="vizdoom_host_container"
 docker rm -f $host_container_name #Ensure an old instance of the container is not present
 
-docker pull spmohanty/vizdoom2018-singleplayer-host #Or build your own
+docker pull spmohanty/vizdoom2018_host_image 
 docker run \
   --name $host_container_name \
   --net=host \
   --env="DISPLAY" \
-  -it spmohanty/vizdoom2018-singleplayer-host \
-  /home/crowdai/run.sh
+  -it spmohanty/vizdoom2018_host_image \
+  /home/crowdai/run.sh -b 0 -p 1
 ```
 
 #### <a name="run_agent"></a>  Run Agent Locally
